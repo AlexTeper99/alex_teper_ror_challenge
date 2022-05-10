@@ -1,0 +1,34 @@
+<div id="<%= dom_id user %>">
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Created date</th>
+      <th>Updated date</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td> <%= user.id %></td>
+      <td> <%= user.name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.gender %></td>
+      <td> <%= user.age %></td>
+      <td> <%= user.created_date %></td>
+      <td> <%= user.updated_date %></td>
+      <td></td>
+
+    </tr>
+    </tbody>
+
+  </table>
+  <p>Informacion ciudad y personaje marvel: <span><%= link_to "Click aqui", "/infousers/#{user.infouser.id}" %> </span></p>
+
+
+</div>

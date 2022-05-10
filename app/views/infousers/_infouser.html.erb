@@ -1,0 +1,33 @@
+<div id="<%= dom_id infouser %>">
+  <table>
+    <thead>
+    <tr>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Favorite marvel character</th>
+      <th>Favorite marvel comic</th>
+      <th>Created date</th>
+      <th>Updated date</th>
+      <th>Informacion Personal</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td> <%=infouser.city %></td>
+      <td><%= infouser.state %></td>
+      <td><%= infouser.country %></td>
+      <td> <%= infouser.favorite_marvel_character %></td>
+      <td> <%= infouser.favorite_marvel_comic %></td>
+      <td> <%= infouser.created_date %></td>
+      <td> <%= infouser.updated_date %></td>
+      <td><span><%= link_to "Click aqui", "/users/#{infouser.User.id}" %> </span></td>
+
+
+    </tr>
+    </tbody>
+
+  </table>
+</div>

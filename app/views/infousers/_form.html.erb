@@ -1,0 +1,57 @@
+<%= form_with(model: infouser) do |form| %>
+  <% if infouser.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(infouser.errors.count, "error") %> prohibited this infouser from being saved:</h2>
+
+      <ul>
+        <% infouser.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div>
+    <%= form.label :country, style: "display: block" %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div>
+    <%= form.label :favorite_marvel_character, style: "display: block" %>
+    <%= form.text_field :favorite_marvel_character %>
+  </div>
+
+  <div>
+    <%= form.label :favorite_marvel_comic, style: "display: block" %>
+    <%= form.text_field :favorite_marvel_comic %>
+  </div>
+
+  <div>
+    <%= form.label :created_date, style: "display: block" %>
+    <%= form.date_field :created_date %>
+  </div>
+
+  <div>
+    <%= form.label :updated_date, style: "display: block" %>
+    <%= form.date_field :updated_date %>
+  </div>
+
+  <div>
+    <%= form.label :User_id, style: "display: block" %>
+    <%= form.text_field :User_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
